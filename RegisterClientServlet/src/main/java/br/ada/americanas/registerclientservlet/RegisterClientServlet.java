@@ -21,13 +21,12 @@ public class RegisterClientServlet extends HttpServlet {
         String cpf = request.getParameter("cpf");
         String email = request.getParameter("email");
 
-        PrintWriter writer = response.getWriter();
-        writer.println( "<html><body> <div align =\"center\">" +
-                "<h1> Successfully registered user</h1>" +
-                "<p>Name: " +  name+"</p>" +
-                "<p>CPF: " +  cpf+"</p>" +
-                        "<p>E-mail: " +  email+"</p>"+
-                "</body></html>");
+        request.setAttribute("name", name);
+        request.setAttribute("cpf", cpf);
+        request.setAttribute("email", email);
+
+        request.getRequestDispatcher("/registro.jsp").forward(request, response);
+
 
     }
 }
