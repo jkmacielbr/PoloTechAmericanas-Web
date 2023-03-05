@@ -5,12 +5,13 @@
 
 
 
+
 <html>
 <head>
     <title>Historico de operação</title>
 </head>
 <body>
-
+    <title>Operações realizadas foram</title>
 <c:forEach  var="operacao" items="${requestScope.historico_operacoes}">
 
     <c:out value="soma = ${operacao}"/> <br> </br>

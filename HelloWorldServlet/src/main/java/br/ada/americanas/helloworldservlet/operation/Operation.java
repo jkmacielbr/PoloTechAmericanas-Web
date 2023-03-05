@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 public interface Operation {
 
+
+
     BigDecimal execute (BigDecimal first, BigDecimal second);
 
     String operationMath();
